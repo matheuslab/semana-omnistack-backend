@@ -4,11 +4,13 @@ const OngController = require('./controllers/OngController');
 const IncidentController = require('./controllers/IncidentController');
 const ProfileController = require('./controllers/ProfileController');
 const SessionController = require('./controllers/SessionController');
+const SaasLoginController = require('./controllers/SaasLoginController')
 
 
 const routes = express.Router();
 
 routes.post('/sessions', SessionController.create);
+routes.post('/sassLogin', SaasLoginController.create);
 
 routes.get('/ongs', OngController.index);
 routes.post('/ongs', OngController.create);
